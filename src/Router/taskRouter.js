@@ -7,7 +7,9 @@ export const taskrouter = express.Router();
 
 
 
-
+taskrouter.get('/',function(){
+    return res.json({message: 'Hello from task router'})
+})
 taskrouter.post('/tasks', addTask);
 taskrouter.get('/tasks', getAllTasks);
 taskrouter.get('/tasks/:taskId', getTaskById);

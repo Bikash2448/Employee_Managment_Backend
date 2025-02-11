@@ -5,6 +5,9 @@ import { getUser,getuserByid,saveUser,updateUser,deleteUser,loginUser } from '..
 
 export const router = express.Router();
 
+router.get('/',function(req,res){
+    return res.json({message: 'Hello from user router'});
+})
 router.get('/users',getUser)
 router.get('/users/:id',getuserByid);
 router.post('/users',saveUser);
